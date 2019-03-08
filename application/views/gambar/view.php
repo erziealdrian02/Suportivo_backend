@@ -1,8 +1,6 @@
-
-
-		<div class="row">
+	<div class="row">
 			<div class="col-xs-12">
-				<h1><i class="fa fa-certificate">Data Gambar</i></h1>            	
+				<h1><i class="fa fa-certificate">Data Gambar</i></h1>
             </div>
             <div class="col-xs-12 text-right">
                 <div class="form-group">
@@ -33,7 +31,7 @@ if( ! empty($gambar)){ // Jika data pada database tidak sama dengan empty (alias
 		{
 			echo "<img src='".base_url("images/".$data->media)."' max width='250' height='300'>";
 		} else {
-			echo "<video controls='controls' src='" . base_url("images/".$data->media) ."' max width='250' height='300'>";
+			echo "<video loop=loop controls='controls' src='" . base_url("images/".$data->media) ."' max width='250' height='300'>";
 		}
 			?>
 		</td>

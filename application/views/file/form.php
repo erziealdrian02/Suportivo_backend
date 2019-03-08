@@ -1,4 +1,3 @@
-
 <style type="text/css">
 	input.file{
 		background-color: #1b2a41;
@@ -11,7 +10,7 @@
 		border-radius: 10px;
 		font-size: 20px;
 	}
-	
+
 </style>
 
 <h1>Tambah Dokumen</h1><hr>
@@ -21,9 +20,9 @@
 <div class="container" style="width: 85%;">
 	<!-- <div class="alert alert-danger"><?php echo validation_errors(); ?></div> -->
 <?php echo form_open("File/tambah", array('enctype'=>'multipart/form-data')); ?>
-		
-	<div class="form-group">
-		<label>Versi</label>
+
+		<div class="form-group">
+			<label>Versi</label>
 			<input class="form-control" type="text" name="versi" id="ver" value="<?php echo set_value('versi'); ?>">
 		</div>
 
@@ -53,10 +52,10 @@
 		<?php
 		$q = $this->db->query("select * from sub_category where category_id_category=1");
 		foreach($q->result() as $d){
-		?>	
-			
+		?>
+
 			 <option value="<?php echo $d->id_sub_category; ?>"><?php echo $d->nama_sub_category; ?></option>
-		<?php 
+		<?php
 		}
 		?>
 			</optgroup>
@@ -64,10 +63,10 @@
 		<?php
 		$q = $this->db->query("select * from sub_category where category_id_category=2");
 		foreach($q->result() as $d){
-		?>	
-			
+		?>
+
 			 <option value="<?php echo $d->id_sub_category; ?>"><?php echo $d->nama_sub_category; ?></option>
-		<?php 
+		<?php
 		}
 		?>
 			</optgroup>
@@ -78,13 +77,17 @@
 		</div>
 
 		<div class="form-group">
+			<label>Link</label>
+			<input class="form-control" type="text" name="link" id="ver" value="<?php echo set_value('link'); ?>">
+		</div>
+
+		<div class="form-group">
 		<label for="deskripsi">Deskripsi</label>
-			<textarea class="ckeditor" name="input_deskripsi" id="deskripsi" value="<?php echo set_value('input_deskripsi'); ?>"></textarea> 
+			<textarea class="ckeditor" name="input_deskripsi" id="deskripsi" value="<?php echo set_value('input_deskripsi'); ?>"></textarea>
 		</div>
 
 	</div>
-		
-		
+
 	<hr>
 	<em><input style="margin-left: 10px;font-size: 22px;" class="btn btn-primary" type="submit" name="submit" value="Submit"></em>
 
@@ -98,4 +101,3 @@ var ckeditor = CKEDITOR.replace('input_deskripsi',{
 CKEDITOR.disableAutoInline = true;
 CKEDITOR.inline('editable');
 </script>
-

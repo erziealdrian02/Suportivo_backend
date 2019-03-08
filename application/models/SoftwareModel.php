@@ -11,9 +11,9 @@ class SoftwareModel extends CI_Model {
 		public function upload(){
 		$config['upload_path'] = './software/';
 		$config['allowed_types'] = '*';
-		$config['max_size']	= '100000';
+		$config['max_size']	= '900000000';
 		$config['remove_space'] = TRUE;
-	
+
 		$this->load->library('upload', $config); // Load konfigurasi uploadnya
 		if($this->upload->do_upload('input_software')){ // Lakukan upload dan Cek jika proses upload berhasil
 			// Jika berhasil :
@@ -34,7 +34,7 @@ class SoftwareModel extends CI_Model {
 			'keterangan'=>$this->input->post('input_deskripsi'),
 			'id_sub_category' => $this->input->post('produk')
 		);
-		
+
 		$this->db->insert('produk_software', $data);
 	}
 }

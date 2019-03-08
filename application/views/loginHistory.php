@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/datepicker/datepicker3.css" />
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/assets-ad/plugins/datepicker/datepicker3.css" />
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -20,7 +20,7 @@
               <input id="searchText" type="text" name="searchText" value="<?php echo $searchText; ?>" class="form-control" placeholder="Search Text"/>
             </div>
             <div class="col-md-1 form-group">
-              <button type="submit" class="btn btn-md btn-default btn-block searchList pull-right"><i class="fa fa-search"></i></button> 
+              <button type="submit" class="btn btn-md btn-default btn-block searchList pull-right"><i class="fa fa-search"></i></button>
             </div>
           </form>
         </div>
@@ -61,7 +61,7 @@
                     }
                     ?>
                   </table>
-                  
+
                 </div><!-- /.box-body -->
                 <div class="box-footer clearfix">
                     <?php echo $this->pagination->create_links(); ?>
@@ -71,11 +71,11 @@
         </div>
     </section>
 </div>
-<script src="<?php echo base_url(); ?>assets/plugins/datepicker/bootstrap-datepicker.js"></script>
+<script src="<?php echo base_url(); ?>assets/assets-ad/plugins/datepicker/bootstrap-datepicker.js"></script>
 <script type="text/javascript">
     jQuery(document).ready(function(){
         jQuery('ul.pagination li a').click(function (e) {
-            e.preventDefault();            
+            e.preventDefault();
             var link = jQuery(this).get(0).href;
             jQuery("#searchList").attr("action", link);
             jQuery("#searchList").submit();

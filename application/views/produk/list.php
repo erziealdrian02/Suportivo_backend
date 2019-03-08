@@ -10,21 +10,19 @@
 	<tr>
 		<th style="text-align: center;">Produk</th>
 		<th style="text-align: center;">Aksi<i style="float: right;" class="fa fa-database"></i></th>
-	</tr>	
+	</tr>
 <?php
 if( ! empty($data)){ // Jika data pada database tidak sama dengan empty (alias ada datanya)
 
-	foreach($data as $d){ // Lakukan looping pada variabel gambar dari controller 
-?>     
+	foreach($data as $d){ // Lakukan looping pada variabel gambar dari controller
+?>
 	<tbody>
 		<tr>
 		<td><?php echo "$d->nama_sub_category" ?></td>
 		<td>
-			<!--
-			<a href="<?php echo base_url("user/update/");?><?php echo $d->id_sub_category; ?>">Edit</a>
-			<a href="<?php echo base_url("crud/hapus/");?><?php echo $d->id_sub_category; ?>">Delete</a>
-			-->
+			<a class="btn btn-primary" href="<?php echo base_url("user/update/");?><?php echo $d->id_sub_category; ?>">Edit&nbsp;&nbsp;<i class="fa fa-edit"></i></a>
 			<a class="btn btn-primary" href="<?php echo base_url("user/detail/");?><?php echo $d->id_sub_category; ?>">Details&nbsp;&nbsp;<i class="fa fa-search"></i></a>
+			<a class="btn btn-primary" href="<?php echo base_url("crud/hapus/");?><?php echo $d->id_sub_category; ?>">Delete&nbsp;&nbsp;<i class="fa fa-trash"></i></a>
 		</td>
 		</tr>
 	</tbody>
@@ -39,8 +37,8 @@ if( ! empty($data)){ // Jika data pada database tidak sama dengan empty (alias a
 		?>
 
 		</table>
-		
-		<!-- 
+
+		<!--
 		<form method="POST" action="<?php echo base_url('user/data');?>">
 		<select name="produk" class="form-control" style="width: 200px !important;">
 			<option value="">#-Produk-#</option>
@@ -48,10 +46,10 @@ if( ! empty($data)){ // Jika data pada database tidak sama dengan empty (alias a
 		<?php
 		$q = $this->db->query("select * from sub_category where category_id_category=1");
 		foreach($q->result() as $d){
-		?>	
-			
+		?>
+
 			 <option value="<?php echo $d->id_sub_category; ?>"><?php echo $d->nama_sub_category; ?></option>
-		<?php 
+		<?php
 		}
 		?>
 			</optgroup>
@@ -59,10 +57,10 @@ if( ! empty($data)){ // Jika data pada database tidak sama dengan empty (alias a
 		<?php
 		$q = $this->db->query("select * from sub_category where category_id_category=2");
 		foreach($q->result() as $d){
-		?>	
-			
+		?>
+
 			 <option value="<?php echo $d->id_sub_category; ?>"><?php echo $d->nama_sub_category; ?></option>
-		<?php 
+		<?php
 		}
 		?>
 			</optgroup>
@@ -71,6 +69,5 @@ if( ! empty($data)){ // Jika data pada database tidak sama dengan empty (alias a
 		</select>
 		<button>lihat</button>
 		</form> -->
-		
-<!--  --> 
 
+<!--  -->

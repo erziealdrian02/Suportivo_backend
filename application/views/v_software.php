@@ -6,7 +6,7 @@
         <small>Form Upload</small>
       </h1>
     </section>
-    
+
     <section class="content">
         <div class="row">
             <?php echo $isi; ?>

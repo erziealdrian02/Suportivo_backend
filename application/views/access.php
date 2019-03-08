@@ -8,7 +8,7 @@
     <section class="content">
         <div class="row">
             <div class="col-xs-12 text-center">
-                <img src="<?php echo base_url() ?>assets/images/access.png" alt="Access Denied Image" />
+                <img src="<?php echo base_url() ?>assets/assets-ad/images/access.png" alt="Access Denied Image" />
             </div>
         </div>
     </section>

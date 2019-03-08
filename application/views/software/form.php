@@ -10,7 +10,7 @@
 		border-radius: 10px;
 		font-size: 20px;
 	}
-	
+
 </style>
 
 
@@ -52,10 +52,10 @@
 		<?php
 		$q = $this->db->query("select * from sub_category where category_id_category=1");
 		foreach($q->result() as $d){
-		?>	
-			
+		?>
+
 			 <option value="<?php echo $d->id_sub_category; ?>"><?php echo $d->nama_sub_category; ?></option>
-		<?php 
+		<?php
 		}
 		?>
 			</optgroup>
@@ -63,10 +63,10 @@
 		<?php
 		$q = $this->db->query("select * from sub_category where category_id_category=2");
 		foreach($q->result() as $d){
-		?>	
-			
+		?>
+
 			 <option value="<?php echo $d->id_sub_category; ?>"><?php echo $d->nama_sub_category; ?></option>
-		<?php 
+		<?php
 		}
 		?>
 			</optgroup>
@@ -77,13 +77,18 @@
 		</div>
 
 		<div class="form-group">
+				<label>Link</label>
+					<input class="form-control" type="text" name="link" id="ver" value="<?php echo set_value('link'); ?>">
+				</div>
+
+		<div class="form-group">
 		<label for="deskripsi">Deskripsi</label>
-			<textarea class="ckeditor" name="input_deskripsi" id="deskripsi" value="<?php echo set_value('input_deskripsi'); ?>"></textarea> 
+			<textarea class="ckeditor" name="input_deskripsi" id="deskripsi" value="<?php echo set_value('input_deskripsi'); ?>"></textarea>
 		</div>
 
 	<hr>
 	<em><input style="margin-left: 10px;font-size: 22px;" class="btn btn-primary" type="submit" name="submit" value="Submit"></em>
-	
+
 
 <?php echo form_close(); ?>
 
